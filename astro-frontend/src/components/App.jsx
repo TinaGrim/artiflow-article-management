@@ -1136,7 +1136,7 @@ const ArticleDetailPage = () => {
     setCommentsLoading(true);
     commentsAPI.getByArticle(article.id)
       .then(res => setComments(res.data?.comments || res.data || []))
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => setCommentsLoading(false));
   }, [article?.id]);
 
